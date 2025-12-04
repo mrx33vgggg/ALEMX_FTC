@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AlemX FTC - Advanced Robotics & AI Collective">
+    <title>AlemX FTC | Robotics & AI Collective</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Intro Screen -->
+    <div id="intro-screen" class="intro-screen" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+        <div class="intro-content">
+            <h1 id="intro-title" class="intro-title" data-i18n="intro.title">Hello everyone — I'm proud to present our team at AlemX FTC.</h1>
+            <p class="intro-subtitle" data-i18n="intro.subtitle">Click anywhere to enter</p>
+        </div>
+        <div class="intro-streak"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AlemX</span>
+                <span class="logo-accent">FTC</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#team" data-i18n="nav.team">Team</a></li>
+                <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+           
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Layers -->
+    <div class="background-layers">
+        <div class="bg-layer bg-stars"></div>
+        <div class="bg-layer bg-nebula"></div>
+        <div class="bg-layer bg-clouds"></div>
+        <svg class="bg-constellation" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.1" />
+                </linearGradient>
+            </defs>
+            <path class="constellation-line" d="M100,200 L300,150 L500,300 L700,250 L900,400" stroke="url(#lineGrad)" stroke-width="1" fill="none"/>
+            <path class="constellation-line" d="M1200,150 L1400,300 L1600,200 L1800,350" stroke="url(#lineGrad)" stroke-width="1" fill="none"/>
+        </svg>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero.title">
+                    <span class="word">Innovating</span>
+                    <span class="word">the</span>
+                    <span class="word">Future</span>
+                    <span class="word">of</span>
+                    <span class="word">Robotics</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Where artificial intelligence meets advanced robotics to shape tomorrow</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.cta">Explore Our Work</a>
+                    <a href="#about" class="btn btn-secondary" data-i18n="hero.cta_secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-3d-slot" data-placeholder="3D Robot Model">
+                <div class="placeholder-content">
+                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                        <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                        <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                        <circle cx="100" cy="100" r="40" stroke="currentColor" stroke-width="2" opacity="0.7"/>
+                        <text x="100" y="105" text-anchor="middle" fill="currentColor" font-size="14" opacity="0.6">3D MODEL SLOT</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">Who We Are</h2>
+                
+                <div class="about-content">
+                    <div class="about-block reveal-element">
+                        <h3 data-i18n="about.mission.title">Our Mission</h3>
+                        <p data-i18n="about.mission.text">At AlemX FTC, we are dedicated to pushing the boundaries of what's possible in robotics and artificial intelligence. Our mission is to develop innovative solutions that solve real-world problems while inspiring the next generation of engineers and technologists.</p>
+                    </div>
+
+                    <div class="about-block reveal-element">
+                        <h3 data-i18n="about.vision.title">Our Vision</h3>
+                        <p data-i18n="about.vision.text">We envision a future where autonomous systems work seamlessly alongside humans, enhancing productivity, safety, and quality of life. Through cutting-edge research and development, we're building the intelligent machines that will define tomorrow's world.</p>
+                    </div>
+
+                    <div class="about-block reveal-element">
+                        <h3 data-i18n="about.process.title">Our Process</h3>
+                        <p data-i18n="about.process.text">Innovation doesn't happen by accident. Our team follows a rigorous design and development process that combines theoretical research with practical engineering. We prototype rapidly, test extensively, and iterate continuously to achieve breakthrough results.</p>
+                    </div>
+
+                    <div class="about-block reveal-element">
+                        <h3 data-i18n="about.impact.title">Our Impact</h3>
+                        <p data-i18n="about.impact.text">From competitive robotics championships to real-world industrial applications, our work is making a difference. We've developed autonomous systems for manufacturing, created AI-powered diagnostic tools, and mentored hundreds of students in STEM fields.</p>
+                    </div>
+
+                    <div class="about-block reveal-element">
+                        <h3 data-i18n="about.careers.title">Join Our Team</h3>
+                        <p data-i18n="about.careers.text">We're always looking for talented individuals who share our passion for innovation. Whether you're a seasoned engineer or an ambitious student, there's a place for you at AlemX FTC. Together, we can build the future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects.title">Our Projects</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Innovative solutions at the intersection of AI and robotics</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card reveal-element" data-project="1">
+                        <div class="project-image photo-slot" data-placeholder="Project Image 1">
+                            <div class="placeholder-overlay">
+                                <span>Project Image 1</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">AUTONOMOUS</span>
+                            </div>
+                            <h3 data-i18n="projects.project1.title">Autonomous Navigation System</h3>
+                            <p data-i18n="projects.project1.summary">Advanced AI-powered navigation for complex environments</p>
+                            <button class="btn btn-tertiary project-modal-btn" data-i18n="projects.learn_more">Learn more</button>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card reveal-element" data-project="2">
+                        <div class="project-image photo-slot" data-placeholder="Project Image 2">
+                            <div class="placeholder-overlay">
+                                <span>Project Image 2</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">INDUSTRIAL</span>
+                                <span class="tag">AI</span>
+                            </div>
+                            <h3 data-i18n="projects.project2.title">Smart Manufacturing Assistant</h3>
+                            <p data-i18n="projects.project2.summary">Industrial robotics with predictive maintenance capabilities</p>
+                            <button class="btn btn-tertiary project-modal-btn" data-i18n="projects.learn_more">Learn more</button>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card reveal-element" data-project="3">
+                        <div class="project-image photo-slot" data-placeholder="Project Image 3">
+                            <div class="placeholder-overlay">
+                                <span>Project Image 3</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">AUTONOMOUS</span>
+                            </div>
+                            <h3 data-i18n="projects.project3.title">Vision Recognition Platform</h3>
+                            <p data-i18n="projects.project3.summary">Real-time object detection and classification system</p>
+                            <button class="btn btn-tertiary project-modal-btn" data-i18n="projects.learn_more">Learn more</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="team.title">Our Team</h2>
+                <p class="section-subtitle" data-i18n="team.subtitle">Meet the minds behind AlemX FTC</p>
+                
+                <!-- Founders -->
+                <div class="founders-grid">
+                    <article class="team-card team-card-founder reveal-element" data-member="founder1">
+                        <div class="team-photo photo-slot" data-placeholder="Founder 1 Photo">
+                            <div class="placeholder-overlay">
+                                <span>Founder Photo</span>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.founder1.name">Buharbaev Jahan</h3>
+                            <p class="team-role" data-i18n="team.founder1.role">Mentor</p>
+                            <p class="team-bio" data-i18n="team.founder1.bio">Robotics engineer with 10+ years of experience in autonomous systems and AI integration.</p>
+                            <div class="team-social">
+                                     <a href="https://www.instagram.com/jahanbuharbaev?igsh=aHg1ZWMwOHJqMWYz&utm_source=qr" aria-label="Instagram" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 7.4A2.9 2.9 0 1 1 14.9 12 2.9 2.9 0 0 1 12 14.9zM17.8 6.2a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                            </div>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Full Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card team-card-founder reveal-element" data-member="founder2">
+                        <div class="team-photo photo-slot" data-placeholder="Founder 2 Photo">
+                            <div class="placeholder-overlay">
+                                <span>Founder Photo</span>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.founder2.name">Jolbatrov Elaman</h3>
+                            <p class="team-role" data-i18n="team.founder2.role">Mentor</p>
+                            <p class="team-bio" data-i18n="team.founder2.bio">AI researcher specializing in machine learning and computer vision for robotics applications.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                                <a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                            </div>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Full Profile</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Team Members -->
+                <div class="team-grid">
+                    <article class="team-card reveal-element" data-member="member1">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 1">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member1.name">Askar Alisher</h3>
+                            <p class="team-role" data-i18n="team.member1.role">Lead Mechanical Engineer</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member2">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 2">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member2.name">Koishan Nauryzbek</h3>
+                            <p class="team-role" data-i18n="team.member2.role">Software Developer</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member3">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 3">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member3.name">Kenesbai Ernar</h3>
+                            <p class="team-role" data-i18n="team.member3.role">Electronics Specialist</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member4">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 4">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member4.name">Zhetkizgen Azamat</h3>
+                            <p class="team-role" data-i18n="team.member4.role">AI Research Engineer</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member5">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 5">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member5.name">Zholdybay Olzhas</h3>
+                            <p class="team-role" data-i18n="team.member5.role">Systems Integration</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member6">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 6">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member6.name">Zhumatov Nurali</h3>
+                            <p class="team-role" data-i18n="team.member6.role">Computer Vision Specialist</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member7">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 7">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member7.name">Armankyzy Akerke</h3>
+                            <p class="team-role" data-i18n="team.member7.role">SMM</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member8">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 8">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member8.name">Altynbek Beksultan</h3>
+                            <p class="team-role" data-i18n="team.member8.role">Data Science Lead</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member9">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 9">
+                            <div class="placeholder-overlay"><span><img src="img/mark.png" width="225" alt="Моё фото"></span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member9.name">Mark Zuckerberg</h3>
+                            <p class="team-role" data-i18n="team.member9.role">Automation Specialist</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-element" data-member="member10">
+                        <div class="team-photo photo-slot" data-placeholder="Team Member 10">
+                            <div class="placeholder-overlay"><span>Member Photo</span></div>
+                        </div>
+                        <div class="team-info">
+                            <h3 data-i18n="team.member10.name">Steve Jobs</h3>
+                            <p class="team-role" data-i18n="team.member10.role">Quality Assurance Lead</p>
+                            <button class="btn btn-sm team-modal-btn" data-i18n="team.view_profile">View Profile</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="blog.title">Latest Updates</h2>
+                <p class="section-subtitle" data-i18n="blog.subtitle">Stay informed about our progress and innovations</p>
+                <div class="blog-cta">
+                    <a href="#" class="btn btn-primary" data-i18n="blog.cta">Visit Our Blog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Let's collaborate on the future of robotics</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3 data-i18n="contact.email.label">Email</h3>
+                            <a href="mailto:info@alemxftc.com">AlemXFTC@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <h3 data-i18n="contact.phone.label">Phone</h3>
+                            <a href="tel:+77051752112">+7 (777) 777-7777</a>
+                        </div>
+                        <div class="contact-item">
+                            <h3 data-i18n="contact.location.label">Location</h3>
+                            <p data-i18n="contact.location.text">Mangystau, Aktau Oqushylar saraiy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">AlemX</span>
+                    <span class="logo-accent">FTC</span>
+                </div>
+                <p class="footer-tagline" data-i18n="footer.tagline">Shaping the future through innovation</p>
+                <div class="footer-social">
+                  <!-- TikTok -->
+<a href="https://www.tiktok.com/@alemx.ftc?_r=1&_t=ZM-91gy6a4QKke" aria-label="TikTok" target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.5 2c.4 2.2 1.8 3.6 4 3.8v3c-1.7-.2-3.1-.9-4-2v7.7c0 2.9-2.3 5.3-5.3 5.3S2 16.4 2 13.4c0-3 2.4-5.3 5.2-5.3.6 0 1.2.1 1.8.3v3c-.5-.3-1-.4-1.6-.4-1.2 0-2.2 1-2.2 2.3 0 1.2 1 2.2 2.2 2.2 1.3 0 2.3-1 2.3-2.2V2h3z"/>
+    </svg>
+</a>
+
+<!-- Instagram -->
+<a href="https://www.instagram.com/alemx_ftc?igsh=MWNtaGx1cGVvN2N2OA==" aria-label="Instagram" target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 7.4A2.9 2.9 0 1 1 14.9 12 2.9 2.9 0 0 1 12 14.9zM17.8 6.2a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/>
+    </svg>
+</a>
+
+                </div>
+                <p class="footer-copyright">&copy; 2025 AlemX FTC. All rights reserved. Created A.BEXULTAN</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modal-body" class="modal-body">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Modal -->
+    <div id="team-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="team-modal-body" class="modal-body">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html>
