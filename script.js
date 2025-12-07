@@ -386,7 +386,7 @@ projects: ['Vision Recognition Platform', 'Deep Learning Pipeline'],
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     
-    // Focus on close button for accessibility
+    
     const closeBtn = modal.querySelector('.modal-close');
     if (closeBtn) closeBtn.focus();
   }
@@ -401,7 +401,12 @@ projects: ['Vision Recognition Platform', 'Deep Learning Pipeline'],
       // For members without detailed data
       modalBody.innerHTML = `
         <h2 id="team-modal-title">Team Member Profile</h2>
-        <p style="color: var(--text-secondary);">Detailed profile coming soon.</p>
+        <p style="color: var(--text-secondary);">AlemX FTC is a team of passionate students united by curiosity, creativity, and a shared love for robotics.
+We believe innovation begins with simple ideas — ideas that grow into real projects through teamwork, discipline, and dedication.
+Our mission is to learn, improve, and push ourselves every day.
+We challenge each other, support each other, and turn mistakes into progress.
+Together, we’re not just building robots —
+we’re building the future we want to live in.</p>
       `;
     } else {
       modalBody.innerHTML = `
