@@ -1,15 +1,14 @@
-// AlemX FTC Website - Main JavaScript
-// Follows strict no-blocking initialization rules
+
 
 (function() {
   'use strict';
 
-  // ===== STATE =====
+  
   let currentLang = 'en';
   let translations = null;
   let isIntroActive = true;
 
-  // ===== UTILITY FUNCTIONS =====
+  
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => document.querySelectorAll(selector);
 
@@ -25,7 +24,7 @@
     };
   };
 
-  // Check if user prefers reduced motion
+  
   const prefersReducedMotion = () => {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   };
@@ -344,17 +343,18 @@
     },
     team: {
       founder1: {
-        name: 'Alex Chen',
-        role: 'Co-Founder & Chief Engineer',
-        bio: 'Alex has over 10 years of experience in robotics engineering and autonomous systems. Previously led the robotics division at a Fortune 500 tech company. Holds a Ph.D. in Mechanical Engineering from MIT.',
+        name: 'Buharbaev Jahan',        role: 'Co-Founder & Chief Engineer',
+        bio: 'Jahan is a school engineering and robotics teacher. He teaches students how to build and program simple robots, explains technology in an easy way, and helps the team prepare for competitions. Jahan always supports creativity and teamwork, making learning fun and inspiring.',
+
         projects: ['Autonomous Navigation System', 'Manufacturing Assistant'],
         skills: ['Robotics', 'Control Systems', 'AI Integration', 'Team Leadership']
       },
       founder2: {
-        name: 'Sarah Williams',
-        role: 'Co-Founder & AI Director',
-        bio: 'Sarah is a leading researcher in machine learning and computer vision. Published 30+ papers in top AI conferences. Former research scientist at a major AI lab. Ph.D. in Computer Science from Stanford.',
-        projects: ['Vision Recognition Platform', 'Deep Learning Pipeline'],
+        name: 'Jolbatrov Elaman',
+role: 'Co-Founder & AI Director',
+bio: 'Elaman is a school-level AI and robotics mentor. He teaches students how artificial intelligence works, helps with coding, and guides the team during robotics projects. He explains difficult things in a simple way and supports the team in competitions.',
+projects: ['Vision Recognition Platform', 'Deep Learning Pipeline'],
+
         skills: ['Machine Learning', 'Computer Vision', 'Deep Learning', 'Research']
       }
     }
@@ -453,7 +453,7 @@
       });
     });
 
-    // Team modal triggers
+    
     $$('.team-modal-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const card = e.target.closest('[data-member]');
@@ -593,7 +593,7 @@
     });
   }
 
-  // ===== INITIALIZATION =====
+  
   function init() {
     // Initialize on DOMContentLoaded
     initIntro();
@@ -605,14 +605,14 @@
     initButtonRipples();
     initParallax();
 
-    // Scroll animations will be initialized after intro closes
+    
     if (!isIntroActive) {
       initScrollAnimations();
       animateHeroElements();
     }
   }
 
-  // Start initialization when DOM is ready
+  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
